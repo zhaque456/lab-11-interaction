@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id="sketch" width="800" height="600">
+</canvas>
+<script>
+document.addEventListener('DOMContentLoaded', main);
+	
+var sketch;
+var context;
+
+
+
+function main() {
+	sketch = document.getElementById('sketch');
+	context = sketch.getContext("2d");
+	sketch.addEventListener("click", function(event){
+		context.fillRect(event.x,event.y,60, 70);
+		context.fillRect(event.x,event.y+100,60, 70);
+	}) 
+}
+</script>
+</body>
+</html>
